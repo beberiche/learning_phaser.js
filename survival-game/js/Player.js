@@ -108,7 +108,7 @@ export default class Player extends MatterEntity {
     this.setVelocity(playerVelocity.x, playerVelocity.y);
 
     // 속도가 있다면, 걷는 애니메이션을, 그렇지 않은 경우 제자리에 있는 애니메이션을 보여준다.
-    if (Math.abs(this.velocity.x > 0.1 || Math.abs(this.velocity.y) > 0.1)) {
+    if (Math.abs(this.velocity.x) > 0.1 || Math.abs(this.velocity.y) > 0.1) {
       this.anims.play('female_walk', true);
     } else {
       this.anims.play('female_idle', true);
