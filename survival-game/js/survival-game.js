@@ -17,15 +17,15 @@ const config = {
       gravity: { y: 0 },
     },
   },
-  // plugins: {
-  //   scene: [
-  //    {
-  //     plugin: PhaserMatterCollisionPlugin,
-  //     key:"matterCollision",
-  //     mapping: "matterCollision"
-  //    }
-  //   ]
-  // }
+  plugins: {
+    scene: [
+      {
+        plugin: PhaserMatterCollisionPlugin.default,
+        key: 'matterCollision',
+        mapping: 'matterCollision',
+      },
+    ],
+  },
 };
 
 new Phaser.Game(config);
